@@ -18,7 +18,6 @@ function [] = L06_Q01()
     fprintf("%d is divisible by 4? %d\n",nNumber, bIsDivisible);
 end
 
-
 function[bIsDivisible] = is_divisble_by_4(nNumber)
      %Check if divisible by 4
 

@@ -16,7 +16,6 @@ clear all
 anDenomination = input("Enter the denominations in which chicken nuggets are available: ");
 anQuantity = input("Enter the quantity of each denomination to be purchased: ");
 
-
 nTotal = anDenomination * anQuantity';
 
 fprintf("The total number of chicken nuggets purchased is %d\n", nTotal);

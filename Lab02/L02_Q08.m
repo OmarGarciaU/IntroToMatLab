@@ -22,5 +22,6 @@ fKe = 9.988e9;
 
 %Claculate The Electric Force
 fElectricForce = (fKe * fQ1 * fQ2) / (fR^2);
+
 %print result
 fprintf("The electric force between particle 1 with charge %.2f C and particle 2 with charge %.2f C at a distance of %.2f m is %.2e N\n",fQ1,fQ2,fR,fElectricForce);

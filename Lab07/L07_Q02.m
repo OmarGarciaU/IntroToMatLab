@@ -11,6 +11,8 @@ function[] = L07_Q02()
 
     nMatrix = get_matrix();
     print_matrix(nMatrix);
+    [nRow, nC] = get_basic_row_op_data();
+
     
 end
 
@@ -53,8 +55,8 @@ function[nRow, nC] = get_basic_row_op_data()
     %Output
     %nRow: number of row to do operation
     %nC: Scalar to multiply row
-    nRow = input();
-    nC = input();
+    nRow = input("Enter the row upon which to perform the row op: ");
+    nC = input("Enter the constant multiplier for the row op: ");
     
 end
 
@@ -78,6 +80,8 @@ function[nRowI, nRowJ, nS] = get_replacement_row_op_data()
     nS = input("Enter the scalar multiplier for the row op: ");
 end
 
-function[nRowI, nRowJ, nS] = do_replacement_row_op_data(nMatrix, nRowI, nRowJ, nS)
+function[nMatrix] = do_replacement_row_op_data(nMatrix, nRowI, nRowJ, nS)
 %Get input for Row i, Row j, and scalar S
+    anNewRowI = nS * nMatrix(nRowJ,:) + nMatrix(nRowI,:);
+    nMatrix(nRowI, :) = anNewRowI;
 end
